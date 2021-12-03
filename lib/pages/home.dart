@@ -45,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+
+        title: Image.asset('images/tot.png', scale: 10),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -67,7 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('สวัสดี $title'),
+            Text(
+              'สวัสดี $title',
+              style: Theme.of(context).textTheme.headline3,
+            ),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
@@ -75,13 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
                 child: Text('กดเลย')),
-            header(),
+            const header(),
             const Text(
-              'You have pushed the button this many times:',
+              'ตั้นเอง',
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline3,
             ),
           ],
         ),
